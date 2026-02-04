@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing Automation — Case Study</title>
+  <meta name="description" content="Automatización de listas de precios: 1.5h → 3m, -99% errores, 28 outputs, logs, backups y dashboard en Streamlit." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <strong><a href="../index.html" style="text-decoration:none; color:inherit;">Nicolas Guisande</a></strong>
+        <span class="small">Case Study</span>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
+        <a href="../index.html">Home</a>
+        <a href="../leadership.html">Leadership</a>
+        <a href="../now.html">Now</a>
+        <a href="../assets/cv.pdf">CV</a>
+      </div>
+    </div>
+
+    <h1>Pricing Automation</h1>
+    <p class="lead">
+      De proceso manual con alto riesgo operativo a pipeline gobernado con UI: generación de listas de precios
+      con logs, backups, alertas y dashboard en Streamlit.
+    </p>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="kpi">1.5h → 3m</div>
+        <div class="lbl">Tiempo por corrida</div>
+      </div>
+      <div class="metric">
+        <div class="kpi">-99% errores</div>
+        <div class="lbl">Eliminando copy/paste manual</div>
+      </div>
+      <div class="metric">
+        <div class="kpi">28 CSV</div>
+        <div class="lbl">Outputs listos para sistema</div>
+      </div>
+    </div>
+
+    <h2>Contexto</h2>
+    <p>
+      La actualización de listas de precios dependía de tareas manuales (copy/paste) sobre un XLSX con queries.
+      El flujo era lento, tedioso y con riesgo crítico: publicar un precio incorrecto en plataforma.
+      Además, el negocio necesitaba flexibilidad para correr el proceso semanalmente y, cuando el contexto lo requería, incluso a diario.
+    </p>
+
+    <h2>Decisión y trade-offs</h2>
+    <ul class="list">
+      <li><strong>Prioridad:</strong> velocidad de adopción + control operacional.</li>
+      <li><strong>Trade-off:</strong> por limitaciones de compañía y contexto, la solución quedó como herramienta <strong>local</strong> (no server).</li>
+      <li><strong>Mitigación:</strong> lo dejé operable por cualquiera con documentación, logs, backups, alertas y UI para ejecución y monitoreo.</li>
+    </ul>
+
+    <h2>Implementación</h2>
+    <p>Pipeline (alto nivel):</p>
+    <ul class="list">
+      <li>Lectura de XLSX</li>
+      <li>Refresh de queries</li>
+      <li>Transformaciones</li>
+      <li>Validaciones</li>
+      <li>Exportación con estructura y naming estandarizado</li>
+      <li>Logs de modificaciones y errores</li>
+      <li>Backups automáticos</li>
+      <li>Dashboard en Streamlit para seguimiento de corrida e historial</li>
+    </ul>
+
+    <h2>Governance & UX</h2>
+    <ul class="list">
+      <li><strong>Logs de cambios:</strong> compara outputs nuevos vs anteriores e indica exactamente qué cambió.</li>
+      <li><strong>Backups automáticos:</strong> estructura de carpetas y snapshots para auditoría y rollback.</li>
+      <li><strong>Alertas:</strong> warnings/errores para control rápido.</li>
+      <li><strong>Dashboard Streamlit:</strong> KPIs, status, errores, warnings, resumen por output e historial de corridas.</li>
+    </ul>
+
+    <h2>Resultados</h2>
+    <ul class="list">
+      <li><strong>Tiempo:</strong> ~97% reducción (1.5h → 3m).</li>
+      <li><strong>Errores:</strong> ~99% menos fallas al reemplazar copy/paste por instrucciones reproducibles.</li>
+      <li><strong>Escala:</strong> 28 archivos .csv por corrida listos para carga en sistema.</li>
+      <li><strong>Adopción:</strong> diseñé, testeé, documenté, hice handover y training; hoy lo opera la Commercial Manager y doy soporte ante incidentes.</li>
+    </ul>
+
+    <h2>Siguiente paso</h2>
+    <p>
+      Si el entorno lo permitiera, lo evolucionaría hacia empaquetado tipo installer, tests automáticos,
+      monitoreo más formal y opción de ejecución centralizada. Manteniendo el principio clave: <strong>time-to-value</strong>.
+    </p>
+
+    <div class="footer">
+      <div><a href="../index.html">← Volver al Home</a></div>
+      <div class="small">Productos internos también son productos: UX + governance + operación.</div>
+    </div>
+  </div>
+</body>
+</html>

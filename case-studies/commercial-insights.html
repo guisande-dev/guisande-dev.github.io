@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Commercial Insights Pipeline — Case Study</title>
+  <meta name="description" content="Pipeline en Python para demanda y market basket (Apriori) con datasets de Snowflake. Decisiones comerciales, reordenamiento de Home y +2–3pp CVR." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <strong><a href="../index.html" style="text-decoration:none; color:inherit;">Nicolas Guisande</a></strong>
+        <span class="small">Case Study</span>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
+        <a href="../index.html">Home</a>
+        <a href="../leadership.html">Leadership</a>
+        <a href="../now.html">Now</a>
+        <a href="../assets/cv.pdf">CV</a>
+      </div>
+    </div>
+
+    <h1>Commercial Insights Pipeline</h1>
+    <p class="lead">
+      Decision support en Python para análisis comercial profundo: demanda, performance por producto/categoría/marca y market basket (Apriori)
+      sobre datasets de ventas a escala.
+    </p>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="kpi">+2–3pp CVR</div>
+        <div class="lbl">Mejora post-decisiones</div>
+      </div>
+      <div class="metric">
+        <div class="kpi">300k+ filas</div>
+        <div class="lbl">Dataset de ventas</div>
+      </div>
+      <div class="metric">
+        <div class="kpi">Uso diario</div>
+        <div class="lbl">Durante mi rol de Pricing Analyst</div>
+      </div>
+    </div>
+
+    <h2>Contexto</h2>
+    <p>
+      El equipo necesitaba entender con granularidad qué productos/categorías/marcas empujan venta y qué combinaciones se repiten.
+      Los tableros estándar cubrían lo macro, pero no brindaban flexibilidad para análisis ad-hoc profundo y repetible,
+      con filtros y enfoques iterativos.
+    </p>
+
+    <h2>Decisión y trade-offs</h2>
+    <ul class="list">
+      <li><strong>Construcción:</strong> notebook modular con filtros y múltiples vistas, optimizado para exploración rápida.</li>
+      <li><strong>Trade-off:</strong> no era auto-servicio (yo era el único con dominio de Python en el sector).</li>
+      <li><strong>Mitigación:</strong> hallazgos versionados en Notion y outputs compartidos on-demand por chat.</li>
+    </ul>
+
+    <h2>Implementación</h2>
+    <ul class="list">
+      <li><strong>Fuente:</strong> datasets .csv provenientes de queries ejecutadas en Snowflake.</li>
+      <li><strong>Análisis:</strong> top productos/categorías/marcas por órdenes, revenue y HL; intervalos de revenue; combinatorias.</li>
+      <li><strong>Market Basket:</strong> Apriori para visión estadística de combinaciones probables.</li>
+      <li><strong>Entrega:</strong> tablas y visualizaciones dentro del notebook para consumo inmediato.</li>
+      <li><strong>Stack:</strong> Python (pandas, numpy, mlxtend, matplotlib/seaborn).</li>
+    </ul>
+
+    <h2>Resultados</h2>
+    <ul class="list">
+      <li>Habilitó decisiones para <strong>reordenamiento de Home</strong> y configuración de acciones comerciales basadas en demanda y combinatorias.</li>
+      <li>Impacto medido con <strong>mejora de CVR de +2–3pp</strong> tras implementar ajustes derivados del análisis.</li>
+      <li>Convertí análisis exploratorio en un <strong>framework repetible</strong> de decisiones: uso diario en el rol y hoy ejecución on-demand.</li>
+    </ul>
+
+    <h2>Siguiente paso</h2>
+    <p>
+      Evolución hacia auto-servicio (Streamlit), catálogo de preguntas frecuentes, refresh más automatizado y ML 2.0
+      (afinidades, recomendaciones, segmentación). El objetivo: democratizar el insight sin perder profundidad.
+    </p>
+
+    <div class="footer">
+      <div><a href="../index.html">← Volver al Home</a></div>
+      <div class="small">Cuando el dashboard se queda corto, el notebook bien diseñado es tu arma táctica.</div>
+    </div>
+  </div>
+</body>
+</html>

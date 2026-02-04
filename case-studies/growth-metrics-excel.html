@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Growth Metrics OS (Excel) — Case Study</title>
+  <meta name="description" content="Dashboard operativo en Excel: 3 archivos → 1 single source of truth. Power Query + SharePoint CSV. 5 fuentes (AppsFlyer, Braze, GA4, Snowflake)." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <strong><a href="../index.html" style="text-decoration:none; color:inherit;">Nicolas Guisande</a></strong>
+        <span class="small">Case Study</span>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
+        <a href="../index.html">Home</a>
+        <a href="../leadership.html">Leadership</a>
+        <a href="../now.html">Now</a>
+        <a href="../assets/cv.pdf">CV</a>
+      </div>
+    </div>
+
+    <h1>Growth Metrics OS (Excel)</h1>
+    <p class="lead">
+      Un “operating dashboard” para decisiones diarias de Growth: 3 archivos → 1 single source of truth,
+      con fuentes centralizadas y lectura por granularidad (mensual/semanal/diaria).
+    </p>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="kpi">3 → 1</div>
+        <div class="lbl">Consolidación de archivos</div>
+      </div>
+      <div class="metric">
+        <div class="kpi">5 fuentes</div>
+        <div class="lbl">Datos unificados</div>
+      </div>
+      <div class="metric">
+        <div class="kpi">Equipo (2)</div>
+        <div class="lbl">Uso diario</div>
+      </div>
+    </div>
+
+    <h2>Contexto</h2>
+    <p>
+      Growth consumía información diaria, pero estaba fragmentada en múltiples archivos y hojas
+      (CRM performance, funnel y paid media). Esto generaba mantenimiento duplicado, fricción para responder preguntas
+      y dificultad para “contar la historia” de performance en una sola vista.
+    </p>
+
+    <h2>Decisión y trade-offs</h2>
+    <ul class="list">
+      <li><strong>Elección:</strong> Excel como hub por adopción inmediata y porque el refresh de origen tenía limitaciones (armado de bases manual).</li>
+      <li><strong>Trade-off:</strong> el salto principal no fue automatizar todo el refresh, sino <strong>centralizar</strong> y estandarizar lectura para decidir rápido.</li>
+      <li><strong>Next step:</strong> migración a Power BI (on going) manteniendo lógica de fuentes y granularidades.</li>
+    </ul>
+
+    <h2>Implementación</h2>
+    <p><strong>Fuentes consolidadas (5):</strong></p>
+    <ul class="list">
+      <li>Tráfico — AppsFlyer</li>
+      <li>Share de canales — AppsFlyer</li>
+      <li>Performance CRM/Canvas — Braze</li>
+      <li>App Events — GA4</li>
+      <li>Venta — Snowflake</li>
+    </ul>
+
+    <p><strong>Técnicas:</strong> Power Query + bases .csv en SharePoint + tablas dinámicas y fórmulas.</p>
+
+    <p><strong>Métricas incluidas:</strong></p>
+    <ul class="list">
+      <li>Funnel: Add to Cart, Payment Attempts, Payment Rate, CVR</li>
+      <li>Performance de CRM y Canvas</li>
+      <li>Tráfico en plataforma</li>
+      <li>Evolución CAC</li>
+      <li>Lectura por mensual / semanal / diaria, por canal y media source</li>
+    </ul>
+
+    <h2>Resultados</h2>
+    <ul class="list">
+      <li><strong>Single source of truth:</strong> una sola versión del reporte, con lectura consistente por granularidad y fuente.</li>
+      <li><strong>Menos fricción:</strong> menos mantenimiento, menos búsqueda y más velocidad para responder preguntas.</li>
+      <li><strong>Mejor decisión:</strong> habilitó decisiones más ágiles en CRM (cuándo salir, contenido, canal, frecuencia, audiencia) con visibilidad cruzada de eventos, tráfico y venta.</li>
+    </ul>
+
+    <h2>Siguiente paso</h2>
+    <p>
+      Migración a Power BI para escalar el modelo, automatizar más refresh y robustecer controles de calidad.
+      La meta es mantener la misma claridad operativa, pero con un stack más escalable.
+    </p>
+
+    <div class="footer">
+      <div><a href="../index.html">← Volver al Home</a></div>
+      <div class="small">Menos archivos, más decisiones. La productividad también es una métrica.</div>
+    </div>
+  </div>
+</body>
+</html>
