@@ -3,29 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nicolas Guisande — Data Product Leader</title>
-  <meta name="description" content="Data Product Leader: estrategia + data + ejecución. Construyo automatizaciones, pipelines y dashboards que reducen fricción, bajan errores y aceleran decisiones." />
+  <title>Nicolas Guisande — Data & Growth Analyst</title>
+  <meta name="description" content="Data & Growth Analyst: analytics + automation + CRM. Construyo sistemas que reducen fricción, bajan errores y aceleran decisiones." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;})();</script>
 </head>
 <body>
   <div class="container">
     <div class="nav">
       <div class="brand">
         <strong>Nicolas Guisande</strong>
-        <span class="small">Data Product Leader</span>
+        <span class="small">Data &amp; Growth Analyst</span>
       </div>
       <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
-        <a href="case-studies/pricing-automation.html">Case Studies</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="case-studies/index.html">Case Studies</a>
         <a href="leadership.html">Leadership</a>
         <a href="now.html">Now</a>
-        <a href="assets/cv.pdf">CV</a>
+        <a href="assets/CV.pdf" target="_blank" rel="noopener">CV</a>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro" title="Activar modo oscuro">🌙</button>
       </div>
     </div>
 
-    <h1>Data Product Leader<br/>con mentalidad analítica y manos en el código.</h1>
+    <h1>Data &amp; Growth Analyst<br/>Analytics, Automation &amp; CRM</h1>
     <p class="lead">
-      Conecto estrategia, data y ejecución. Construyo productos internos y pipelines analíticos que reducen fricción,
-      bajan errores y aceleran decisiones. Disfruto horas codeando (Python/SQL/BI) y también liderando iniciativas transversales.
+      Conecto data y ejecución. Diseño sistemas analíticos que reducen fricción operativa, reducen errores y aceleran decisiones. Trabajo hands-on con Python/SQL/BI y en forma transversal con stakeholders.
     </p>
 
     <div class="badges">
@@ -38,23 +41,28 @@
 
     <div class="metrics">
       <div class="metric">
-        <div class="kpi">1.5h → 3m</div>
-        <div class="lbl">Pricing automation cycle time</div>
+        <div class="kpi">-90%</div>
+        <div class="lbl">CRM launch execution time</div>
+        <div class="small">Reducción de tiempos en lanzamientos de campañas</div>
       </div>
+    
       <div class="metric">
-        <div class="kpi">-99% errores</div>
-        <div class="lbl">Eliminando copy/paste manual</div>
+        <div class="kpi">-95%</div>
+        <div class="lbl">Coupons &amp; deeplinks ops time</div>
+        <div class="small">Automatización con Python (Jupyter)</div>
       </div>
+    
       <div class="metric">
-        <div class="kpi">+2–3pp CVR</div>
-        <div class="lbl">Mejoras por decisiones basadas en demanda</div>
+        <div class="kpi">Daily</div>
+        <div class="lbl">Dashboards &amp; insights</div>
+        <div class="small">Seguimiento de performance y decisiones</div>
       </div>
     </div>
 
     <p class="small">
       Destacados: 
       <a href="https://github.com/guisande-dev?tab=repositories" target="_blank" rel="noreferrer">repos</a> ·
-      <a href="case-studies/pricing-automation.html">pricing automation</a> ·
+      <a href="case-studies/index.html">case studies</a> ·
       <a href="now.html">side projects</a>
     </p>
     
@@ -102,12 +110,13 @@
         </div>
       </div>
     </div>
+    <p class="small">Más proyectos y código en <a href="https://github.com/guisande-dev?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>.</p>
 
     <h2>Links</h2>
     <ul class="list">
       <li><a href="https://www.linkedin.com/in/nguisande/" target="_blank" rel="noreferrer">LinkedIn</a></li>
       <li><a href="https://github.com/guisande-dev" target="_blank" rel="noreferrer">GitHub</a></li>
-      <li><a href="assets/cv.pdf">CV (PDF)</a> <span class="small">(subí tu PDF a /assets)</span></li>
+      <li><a href="assets/CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
     </ul>
 
     <div class="footer">
@@ -116,6 +125,7 @@
     </div>
   </div>
 
+  <script src="assets/theme.js"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Leadership — Nicolas Guisande</title>
   <meta name="description" content="Operating model: priorización impacto × tiempo, cadencia de ejecución, calidad vía reviews y enfoque transversal orientado a decisiones." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;})();</script>
 </head>
 <body>
   <div class="container">
@@ -16,9 +18,11 @@
       </div>
       <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
         <a href="index.html">Home</a>
-        <a href="case-studies/pricing-automation.html">Case Studies</a>
+        <a href="case-studies/index.html">Case Studies</a>
+        <a href="leadership.html" class="active">Leadership</a>
         <a href="now.html">Now</a>
-        <a href="assets/cv.pdf">CV</a>
+        <a href="assets/CV.pdf" target="_blank" rel="noopener">CV</a>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro" title="Activar modo oscuro">🌙</button>
       </div>
     </div>
 
@@ -105,5 +109,6 @@
       <div class="small">Liderar también es diseñar sistemas para que otros ejecuten con confianza.</div>
     </div>
   </div>
+  <script src="assets/theme.js"></script>
 </body>
 </html>
