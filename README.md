@@ -11,7 +11,8 @@ This repo hosts my personal portfolio site via **GitHub Pages**.
 - `leadership.html` — operating model & leadership
 - `now.html` — current projects & learning
 - `case-studies/` — listado + case studies (pricing automation, commercial insights, growth metrics Excel)
-- `assets/` — css + attachments (e.g., CV)
+- `assets/` — css, favicon, theme.js, CV. Opcional: `og-image.png` (1200×630) para preview en redes.
+- `404.html` — página personalizada cuando la URL no existe.
 
 ## Local preview
 You can open `index.html` directly in a browser.
@@ -50,3 +51,16 @@ Any change merged into the configured branch is automatically published.
 - **Tipografía:** fuente **DM Sans** (Google Fonts); `line-height: 1.6` en el lead.
 - **Favicon:** SVG con "N" en `assets/favicon.svg`, referenciado en todas las páginas.
 - **Fondo:** gradiente sutil en `body` (variables `--bg` y `--bg-end` para claro/oscuro).
+
+### v1.2 — Mejoras de alta prioridad (2025-02)
+
+**Open Graph y meta sociales**
+- En todas las páginas: `og:title`, `og:description`, `og:image`, `og:url`, `og:locale`; `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`; `link rel="canonical"`.
+- Imagen de preview: `assets/og-image.png` (1200×630). Si no existe, las redes muestran solo título y descripción.
+
+**CTA y accesibilidad**
+- Enlace **Contactar** en la nav (LinkedIn) en todas las páginas.
+- **Skip to content:** enlace "Saltar al contenido" visible al enfocar con teclado; salta a `#main`.
+
+**404**
+- Página **404.html** con mismo estilo, mensaje y enlace a inicio. GitHub Pages la sirve automáticamente en URLs inexistentes.
