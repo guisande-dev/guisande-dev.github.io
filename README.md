@@ -64,3 +64,12 @@ Any change merged into the configured branch is automatically published.
 
 **404**
 - Página **404.html** con mismo estilo, mensaje y enlace a inicio. GitHub Pages la sirve automáticamente en URLs inexistentes.
+
+### v1.3 — Refinamiento de navegación y eliminación de redundancias (2026-02)
+
+**Mejoras en home**
+- Simplificado apartado "Destacados": eliminado link "repos" (redundante con GitHub accesible desde navbar).
+- **Antes:** `Destacados: repos · case studies · side projects` + "Más proyectos en GitHub"
+- **Después:** `Destacados: case studies · now` (más limpio, sin duplicación)
+- Eliminada sección "Links" (LinkedIn, GitHub, CV) que duplicaba exactamente los accesos desde navbar.
+- Resultado: navegación más limpia y eficiente, flujo directo hacia el contenido principal (case studies y side projects).
