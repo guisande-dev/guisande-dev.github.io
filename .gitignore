@@ -1,3 +1,5 @@
+# Archivos de sistema
 .DS_Store
 
-.DS_Store
+# Archivos de PR
+PR_DESCRIPTION.md

@@ -1,32 +1,32 @@
 # Portfolio — Nicolas Guisande
 
-This repo hosts my personal portfolio site via **GitHub Pages**.
+Este repositorio aloja mi sitio de portafolio personal mediante **GitHub Pages**.
 
-## Site
-- Live: https://guisande-dev.github.io
-- [Home](https://guisande-dev.github.io) · [Case Studies](https://guisande-dev.github.io/case-studies/) · [Leadership](https://guisande-dev.github.io/leadership.html) · [Now](https://guisande-dev.github.io/now.html)
+## Sitio
+- En vivo: https://nguisande.github.io
+- [Inicio](https://nguisande.github.io) · [Casos de estudio](https://nguisande.github.io/case-studies/) · [Liderazgo](https://nguisande.github.io/leadership.html) · [Ahora](https://nguisande.github.io/now.html)
 
-## Structure
-- `index.html` — landing
-- `leadership.html` — operating model & leadership
-- `now.html` — current projects & learning
-- `case-studies/` — listado + case studies (pricing automation, commercial insights, growth metrics Excel)
-- `assets/` — css, favicon, theme.js, CV. Opcional: `og-image.png` (1200×630) para preview en redes.
+## Estructura
+- `index.html` — portada
+- `leadership.html` — modelo operativo y liderazgo
+- `now.html` — proyectos actuales y aprendizaje
+- `case-studies/` — listado + casos de estudio (automatización de precios, insights comerciales, métricas de crecimiento en Excel)
+- `assets/` — css, favicon, theme.js, CV. Opcional: `og-image.png` (1200×630) para vista previa en redes.
 - `404.html` — página personalizada cuando la URL no existe.
 
-## Local preview
-You can open `index.html` directly in a browser.
+## Vista previa local
+Puedes abrir `index.html` directamente en un navegador.
 
-Optional (recommended):
-- VS Code → install “Live Server” → right click `index.html` → “Open with Live Server”.
+Opcional (recomendado):
+- VS Code → instala “Live Server” → clic derecho en `index.html` → “Open with Live Server”.
 
-## Deploy
-Deployment is handled by **GitHub Pages** (Settings → Pages).
-Any change merged into the configured branch is automatically published.
+## Despliegue
+El despliegue lo gestiona **GitHub Pages** (Settings → Pages).
+Cualquier cambio fusionado en la rama configurada se publica automáticamente.
 
 ---
 
-## Changelog / Versiones
+## Registro de cambios
 
 ### v1.1 — Mejoras de contenido, navegación y estética (2025-02)
 
@@ -37,7 +37,7 @@ Any change merged into the configured branch is automatically published.
 - Añadido enlace "Case Studies" en la nav de cada case study para volver al listado.
 - Navegación: ítem activo con clase `active` en cada página.
 - Enlace "Más proyectos y código en GitHub" bajo el grid de Case Studies (home y listado).
-- README: enlaces directos a Home, Case Studies, Leadership y Now; descripción actualizada de `case-studies/`.
+- README: enlaces directos a Inicio, Casos de estudio, Liderazgo y Ahora; descripción actualizada de `case-studies/`.
 
 **Modo oscuro**
 - Variables CSS para tema claro y oscuro; respeto de `prefers-color-scheme`.
@@ -67,9 +67,20 @@ Any change merged into the configured branch is automatically published.
 
 ### v1.3 — Refinamiento de navegación y eliminación de redundancias (2026-02)
 
-**Mejoras en home**
+**Mejoras en inicio**
 - Simplificado apartado "Destacados": eliminado link "repos" (redundante con GitHub accesible desde navbar).
 - **Antes:** `Destacados: repos · case studies · side projects` + "Más proyectos en GitHub"
 - **Después:** `Destacados: case studies · now` (más limpio, sin duplicación)
 - Eliminada sección "Links" (LinkedIn, GitHub, CV) que duplicaba exactamente los accesos desde navbar.
-- Resultado: navegación más limpia y eficiente, flujo directo hacia el contenido principal (case studies y side projects).
+- Resultado: navegación más limpia y eficiente, flujo directo hacia el contenido principal (casos de estudio y side projects).
+
+### v1.4 — Homogeneización de idioma en documentación y actualizacion de archivos (2026-02)
+
+**README**
+- Traducidas al español las secciones que estaban en inglés para mantener consistencia de idioma en todo el documento.
+- Actualizados encabezados y descripciones iniciales: sitio, estructura, vista previa local y despliegue.
+- Normalizada la nomenclatura de navegación en texto descriptivo (`Inicio`, `Casos de estudio`, `Liderazgo`, `Ahora`).
+- Conservados términos técnicos y rutas (`GitHub Pages`, `Live Server`, nombres de archivos y paths).
+
+**Archivos**
+- Actualizado el archivo CV.pdf
