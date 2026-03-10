@@ -30,86 +30,132 @@
       </div>
       <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
         <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
         <a href="index.html" class="active">Case Studies</a>
         <a href="../leadership.html">Leadership</a>
         <a href="../now.html">Now</a>
-        <a href="../assets/CV.pdf" target="_blank" rel="noopener">CV</a>
+        <!-- <a href="../assets/CV.pdf" target="_blank" rel="noopener">CV</a> -->
         <a href="https://www.linkedin.com/in/nguisande/" target="_blank" rel="noopener noreferrer">Contactar</a>
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro" title="Activar modo oscuro">🌙</button>
       </div>
     </div>
 
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <a href="index.html">Case Studies</a>
+      <span>›</span>
+      <span>Growth Metrics OS</span>
+    </nav>
+
     <h1>Growth Metrics OS (Excel)</h1>
     <p class="lead">
-      Un “operating dashboard” para decisiones diarias de Growth: 3 archivos → 1 single source of truth,
+      Un "operating dashboard" para decisiones diarias de Growth: 3 archivos → 1 single source of truth,
       con fuentes centralizadas y lectura por granularidad (mensual/semanal/diaria).
     </p>
 
-    <div class="metrics">
-      <div class="metric">
-        <div class="kpi">3 → 1</div>
-        <div class="lbl">Consolidación de archivos</div>
-      </div>
-      <div class="metric">
-        <div class="kpi">5 fuentes</div>
-        <div class="lbl">Datos unificados</div>
-      </div>
-      <div class="metric">
-        <div class="kpi">Equipo (2)</div>
-        <div class="lbl">Uso diario</div>
-      </div>
+    <div class="tech-badges">
+      <span class="tech-badge">Excel</span>
+      <span class="tech-badge">Power Query</span>
+      <span class="tech-badge">SharePoint</span>
+      <span class="tech-badge">AppsFlyer</span>
+      <span class="tech-badge">Braze</span>
+      <span class="tech-badge">GA4</span>
+      <span class="tech-badge">Snowflake</span>
     </div>
 
-    <h2>Contexto</h2>
-    <p>
-      Growth consumía información diaria, pero estaba fragmentada en múltiples archivos y hojas
-      (CRM performance, funnel y paid media). Esto generaba mantenimiento duplicado, fricción para responder preguntas
-      y dificultad para “contar la historia” de performance en una sola vista.
-    </p>
+    <section>
+      <h2>Impacto</h2>
+      <div class="metric-highlight">
+        <div class="metric-hl">
+          <div class="hl-val">3→1</div>
+          <div class="hl-lbl">Archivos consolidados<br>en single source of truth</div>
+        </div>
+        <div class="metric-hl">
+          <div class="hl-val">5</div>
+          <div class="hl-lbl">Fuentes de datos<br>unificadas</div>
+        </div>
+        <div class="metric-hl">
+          <div class="hl-val">2</div>
+          <div class="hl-lbl">Personas en el equipo<br>con uso diario</div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Decisión y trade-offs</h2>
-    <ul class="list">
-      <li><strong>Elección:</strong> Excel como hub por adopción inmediata y porque el refresh de origen tenía limitaciones (armado de bases manual).</li>
-      <li><strong>Trade-off:</strong> el salto principal no fue automatizar todo el refresh, sino <strong>centralizar</strong> y estandarizar lectura para decidir rápido.</li>
-      <li><strong>Next step:</strong> migración a Power BI (on going) manteniendo lógica de fuentes y granularidades.</li>
-    </ul>
+    <!-- Placeholder para screenshots: agregar imagen del dashboard Excel aquí -->
+    <!-- <figure style="margin:24px 0;">
+      <img src="../assets/images/case-studies/growth-metrics-dashboard.png" alt="Growth Metrics OS - vista del dashboard operativo" loading="lazy" style="width:100%; border-radius:12px; border:1px solid var(--line);" />
+      <figcaption style="font-size:13px; color:var(--muted); margin-top:8px;">Vista del dashboard: funnel, CRM performance y tráfico en una sola pantalla</figcaption>
+    </figure> -->
 
-    <h2>Implementación</h2>
-    <p><strong>Fuentes consolidadas (5):</strong></p>
-    <ul class="list">
-      <li>Tráfico — AppsFlyer</li>
-      <li>Share de canales — AppsFlyer</li>
-      <li>Performance CRM/Canvas — Braze</li>
-      <li>App Events — GA4</li>
-      <li>Venta — Snowflake</li>
-    </ul>
+    <section>
+      <h2>Contexto</h2>
+      <p>
+        Growth consumía información diaria, pero estaba fragmentada en múltiples archivos y hojas
+        (CRM performance, funnel y paid media). Esto generaba mantenimiento duplicado, fricción para responder preguntas
+        y dificultad para "contar la historia" de performance en una sola vista.
+      </p>
+    </section>
 
-    <p><strong>Técnicas:</strong> Power Query + bases .csv en SharePoint + tablas dinámicas y fórmulas.</p>
+    <section>
+      <h2>Cómo funciona</h2>
+      <ol class="list">
+        <li><strong>Fuentes externas:</strong> cada plataforma (AppsFlyer, Braze, GA4, Snowflake) exporta CSVs que se depositan en carpetas de SharePoint.</li>
+        <li><strong>Power Query:</strong> conecta el Excel directamente a los CSVs en SharePoint, limpia y normaliza cada fuente.</li>
+        <li><strong>Modelo de datos interno:</strong> tablas relacionadas permiten lectura por granularidad (mensual / semanal / diaria) y por canal.</li>
+        <li><strong>Dashboard:</strong> tablas dinámicas y fórmulas que consolidan funnel, CRM, tráfico, CAC y venta en una sola vista.</li>
+        <li><strong>Refresh:</strong> un clic actualiza todas las fuentes conectadas; no hay copy/paste manual.</li>
+      </ol>
+    </section>
 
-    <p><strong>Métricas incluidas:</strong></p>
-    <ul class="list">
-      <li>Funnel: Add to Cart, Payment Attempts, Payment Rate, CVR</li>
-      <li>Performance de CRM y Canvas</li>
-      <li>Tráfico en plataforma</li>
-      <li>Evolución CAC</li>
-      <li>Lectura por mensual / semanal / diaria, por canal y media source</li>
-    </ul>
+    <section>
+      <h2>Fuentes y métricas</h2>
+      <p><strong>Fuentes consolidadas:</strong></p>
+      <ul class="list">
+        <li>Tráfico y share de canales — AppsFlyer</li>
+        <li>Performance CRM y Canvas — Braze</li>
+        <li>App Events — GA4</li>
+        <li>Venta — Snowflake</li>
+      </ul>
 
-    <h2>Resultados</h2>
-    <ul class="list">
-      <li><strong>Single source of truth:</strong> una sola versión del reporte, con lectura consistente por granularidad y fuente.</li>
-      <li><strong>Menos fricción:</strong> menos mantenimiento, menos búsqueda y más velocidad para responder preguntas.</li>
-      <li><strong>Mejor decisión:</strong> habilitó decisiones más ágiles en CRM (cuándo salir, contenido, canal, frecuencia, audiencia) con visibilidad cruzada de eventos, tráfico y venta.</li>
-    </ul>
+      <p><strong>Métricas incluidas:</strong></p>
+      <ul class="list">
+        <li>Funnel: Add to Cart, Payment Attempts, Payment Rate, CVR</li>
+        <li>Performance de CRM y Canvas</li>
+        <li>Tráfico en plataforma</li>
+        <li>Evolución CAC</li>
+        <li>Lectura por mensual / semanal / diaria, por canal y media source</li>
+      </ul>
+    </section>
 
-    <h2>Siguiente paso</h2>
-    <p>
-      Migración a Power BI para escalar el modelo, automatizar más refresh y robustecer controles de calidad.
-      La meta es mantener la misma claridad operativa, pero con un stack más escalable.
-    </p>
+    <section>
+      <h2>Decisión y trade-offs</h2>
+      <ul class="list">
+        <li><strong>Elección:</strong> Excel como hub por adopción inmediata y porque el refresh de origen tenía limitaciones (armado de bases manual).</li>
+        <li><strong>Trade-off:</strong> el salto principal no fue automatizar todo el refresh, sino <strong>centralizar</strong> y estandarizar lectura para decidir rápido.</li>
+        <li><strong>Next step:</strong> migración a Power BI (on going) manteniendo lógica de fuentes y granularidades.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Resultados</h2>
+      <ul class="list">
+        <li><strong>Single source of truth:</strong> una sola versión del reporte, con lectura consistente por granularidad y fuente.</li>
+        <li><strong>Menos fricción:</strong> menos mantenimiento, menos búsqueda y más velocidad para responder preguntas.</li>
+        <li><strong>Mejor decisión:</strong> habilitó decisiones más ágiles en CRM (cuándo salir, contenido, canal, frecuencia, audiencia) con visibilidad cruzada de eventos, tráfico y venta.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Siguiente paso</h2>
+      <p>
+        Migración a Power BI para escalar el modelo, automatizar más refresh y robustecer controles de calidad.
+        La meta es mantener la misma claridad operativa, pero con un stack más escalable.
+      </p>
+    </section>
 
     <div class="footer">
-      <div><a href="../index.html">← Volver al Home</a></div>
+      <div><a href="index.html">← Volver a Case Studies</a></div>
       <div class="small">Menos archivos, más decisiones. La productividad también es una métrica.</div>
     </div>
   </div>

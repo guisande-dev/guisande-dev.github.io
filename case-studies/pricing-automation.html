@@ -30,14 +30,23 @@
       </div>
       <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
         <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
         <a href="index.html" class="active">Case Studies</a>
         <a href="../leadership.html">Leadership</a>
         <a href="../now.html">Now</a>
-        <a href="../assets/CV.pdf" target="_blank" rel="noopener">CV</a>
+        <!--  <a href="../assets/CV.pdf" target="_blank" rel="noopener">CV</a> -->
         <a href="https://www.linkedin.com/in/nguisande/" target="_blank" rel="noopener noreferrer">Contactar</a>
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro" title="Activar modo oscuro">🌙</button>
       </div>
     </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <a href="index.html">Case Studies</a>
+      <span>›</span>
+      <span>Pricing Automation</span>
+    </nav>
 
     <h1>Pricing Automation</h1>
     <p class="lead">
@@ -45,78 +54,99 @@
       con logs, backups, alertas y dashboard en Streamlit.
     </p>
 
-<section>
-  <h2>Impact / Impacto</h2>
-    <div class="metrics">
-      <div class="metric">
-        <div class="kpi">1.5h → 3m</div>
-        <div class="lbl">Tiempo por corrida</div>
-        <div class="small">De ejecución manual a pipeline automatizado</div>
-      </div>
-      <div class="metric">
-        <div class="kpi">-99% errores</div>
-        <div class="lbl">Eliminando copy/paste manual</div>
-        <div class="small">Control de inputs + validaciones + outputs consistentes</div>
-      </div>
-      <div class="metric">
-        <div class="kpi">28 CSV</div>
-        <div class="lbl">Outputs listos para sistema</div>
-        <div class="small">Estandarización y trazabilidad</div>
-      </div>
+    <div class="tech-badges">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Streamlit</span>
+      <span class="tech-badge">Pandas</span>
+      <span class="tech-badge">XLSX / Power Query</span>
+      <span class="tech-badge">CSV pipelines</span>
     </div>
-  </section>
 
-    <h2>Contexto</h2>
-    <p>
-      La actualización de listas de precios dependía de tareas manuales (copy/paste) sobre un XLSX con queries.
-      El flujo era lento, tedioso y con riesgo crítico: publicar un precio incorrecto en plataforma.
-      Además, el negocio necesitaba flexibilidad para correr el proceso semanalmente y, cuando el contexto lo requería, incluso a diario.
-    </p>
+    <section>
+      <h2>Impacto</h2>
+      <div class="metric-highlight">
+        <div class="metric-hl">
+          <div class="hl-val">97%</div>
+          <div class="hl-lbl">Reducción de tiempo<br>1.5h → 3 minutos</div>
+        </div>
+        <div class="metric-hl">
+          <div class="hl-val">−99%</div>
+          <div class="hl-lbl">Errores operativos<br>vs. proceso manual</div>
+        </div>
+        <div class="metric-hl">
+          <div class="hl-val">28</div>
+          <div class="hl-lbl">CSV listos por corrida<br>con naming estandarizado</div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Decisión y trade-offs</h2>
-    <ul class="list">
-      <li><strong>Prioridad:</strong> velocidad de adopción + control operacional.</li>
-      <li><strong>Trade-off:</strong> por limitaciones de compañía y contexto, la solución quedó como herramienta <strong>local</strong> (no server).</li>
-      <li><strong>Mitigación:</strong> lo dejé operable por cualquiera con documentación, logs, backups, alertas y UI para ejecución y monitoreo.</li>
-    </ul>
+    <!-- Placeholder para screenshots: agregar imagen del dashboard Streamlit aquí -->
+    <!-- <figure style="margin:24px 0;">
+      <img src="../assets/images/case-studies/pricing-automation-dashboard.png" alt="Dashboard Streamlit - historial de corridas y KPIs" loading="lazy" style="width:100%; border-radius:12px; border:1px solid var(--line);" />
+      <figcaption style="font-size:13px; color:var(--muted); margin-top:8px;">Dashboard Streamlit: historial de corridas, KPIs y alertas</figcaption>
+    </figure> -->
 
-    <h2>Implementación</h2>
-    <p>Pipeline (alto nivel):</p>
-    <ul class="list">
-      <li>Lectura de XLSX</li>
-      <li>Refresh de queries</li>
-      <li>Transformaciones</li>
-      <li>Validaciones</li>
-      <li>Exportación con estructura y naming estandarizado</li>
-      <li>Logs de modificaciones y errores</li>
-      <li>Backups automáticos</li>
-      <li>Dashboard en Streamlit para seguimiento de corrida e historial</li>
-    </ul>
+    <section>
+      <h2>Contexto</h2>
+      <p>
+        La actualización de listas de precios dependía de tareas manuales (copy/paste) sobre un XLSX con queries.
+        El flujo era lento, tedioso y con riesgo crítico: publicar un precio incorrecto en plataforma.
+        Además, el negocio necesitaba flexibilidad para correr el proceso semanalmente y, cuando el contexto lo requería, incluso a diario.
+      </p>
+    </section>
 
-    <h2>Governance & UX</h2>
-    <ul class="list">
-      <li><strong>Logs de cambios:</strong> compara outputs nuevos vs anteriores e indica exactamente qué cambió.</li>
-      <li><strong>Backups automáticos:</strong> estructura de carpetas y snapshots para auditoría y rollback.</li>
-      <li><strong>Alertas:</strong> warnings/errores para control rápido.</li>
-      <li><strong>Dashboard Streamlit:</strong> KPIs, status, errores, warnings, resumen por output e historial de corridas.</li>
-    </ul>
+    <section>
+      <h2>Cómo funciona</h2>
+      <ol class="list">
+        <li><strong>Lectura del XLSX:</strong> el pipeline levanta el archivo fuente y refresca las queries internas.</li>
+        <li><strong>Transformaciones:</strong> aplica reglas de negocio y normaliza estructura de datos.</li>
+        <li><strong>Validaciones:</strong> chequea integridad, rangos y consistencia antes de exportar.</li>
+        <li><strong>Exportación:</strong> genera 28 archivos CSV con estructura y naming estandarizados, listos para carga en sistema.</li>
+        <li><strong>Logs:</strong> compara outputs nuevos vs. anteriores y registra exactamente qué cambió.</li>
+        <li><strong>Backups automáticos:</strong> snapshot con timestamp para auditoría y rollback.</li>
+        <li><strong>Dashboard Streamlit:</strong> UI para lanzar el proceso, ver KPIs, alertas y historial de corridas.</li>
+      </ol>
+    </section>
 
-    <h2>Resultados</h2>
-    <ul class="list">
-      <li><strong>Tiempo:</strong> ~97% reducción (1.5h → 3m).</li>
-      <li><strong>Errores:</strong> ~99% menos fallas al reemplazar copy/paste por instrucciones reproducibles.</li>
-      <li><strong>Escala:</strong> 28 archivos .csv por corrida listos para carga en sistema.</li>
-      <li><strong>Adopción:</strong> diseñé, testeé, documenté, hice handover y training; hoy lo opera la Commercial Manager y doy soporte ante incidentes.</li>
-    </ul>
+    <section>
+      <h2>Decisión y trade-offs</h2>
+      <ul class="list">
+        <li><strong>Prioridad:</strong> velocidad de adopción + control operacional.</li>
+        <li><strong>Trade-off:</strong> por limitaciones de compañía y contexto, la solución quedó como herramienta <strong>local</strong> (no server).</li>
+        <li><strong>Mitigación:</strong> lo dejé operable por cualquiera con documentación, logs, backups, alertas y UI para ejecución y monitoreo.</li>
+      </ul>
+    </section>
 
-    <h2>Siguiente paso</h2>
-    <p>
-      Si el entorno lo permitiera, lo evolucionaría hacia empaquetado tipo installer, tests automáticos,
-      monitoreo más formal y opción de ejecución centralizada. Manteniendo el principio clave: <strong>time-to-value</strong>.
-    </p>
+    <section>
+      <h2>Governance & UX</h2>
+      <ul class="list">
+        <li><strong>Logs de cambios:</strong> compara outputs nuevos vs. anteriores e indica exactamente qué cambió.</li>
+        <li><strong>Backups automáticos:</strong> estructura de carpetas y snapshots para auditoría y rollback.</li>
+        <li><strong>Alertas:</strong> warnings/errores para control rápido.</li>
+        <li><strong>Dashboard Streamlit:</strong> KPIs, status, errores, warnings, resumen por output e historial de corridas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Resultados</h2>
+      <ul class="list">
+        <li><strong>Tiempo:</strong> ~97% reducción (1.5h → 3m).</li>
+        <li><strong>Errores:</strong> ~99% menos fallas al reemplazar copy/paste por instrucciones reproducibles.</li>
+        <li><strong>Escala:</strong> 28 archivos .csv por corrida listos para carga en sistema.</li>
+        <li><strong>Adopción:</strong> diseñé, testeé, documenté, hice handover y training; hoy lo opera la Commercial Manager y doy soporte ante incidentes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Siguiente paso</h2>
+      <p>
+        Si el entorno lo permitiera, lo evolucionaría hacia empaquetado tipo installer, tests automáticos,
+        monitoreo más formal y opción de ejecución centralizada. Manteniendo el principio clave: <strong>time-to-value</strong>.
+      </p>
+    </section>
 
     <div class="footer">
-      <div><a href="../index.html">← Volver al Home</a></div>
+      <div><a href="index.html">← Volver a Case Studies</a></div>
       <div class="small">Productos internos también son productos: UX + governance + operación.</div>
     </div>
   </div>

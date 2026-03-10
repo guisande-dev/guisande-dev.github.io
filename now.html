@@ -30,10 +30,11 @@
       </div>
       <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="case-studies/index.html">Case Studies</a>
         <a href="leadership.html">Leadership</a>
         <a href="now.html" class="active">Now</a>
-        <a href="assets/CV.pdf" target="_blank" rel="noopener">CV</a>
+        <!--<a href="assets/CV.pdf" target="_blank" rel="noopener">CV</a> -->
         <a href="https://www.linkedin.com/in/nguisande/" target="_blank" rel="noopener noreferrer">Contactar</a>
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Activar modo oscuro" title="Activar modo oscuro">🌙</button>
       </div>
@@ -42,55 +43,173 @@
     <h1>Now</h1>
     <p class="lead">
       Construyo productos para aprender rápido y mantener el músculo técnico.
-      Mi objetivo: pensar transversalmente, pero siempre terminar en “algo que se usa”.
+      Mi objetivo: pensar transversalmente, pero siempre terminar en "algo que se usa".
       En paralelo, aplico este enfoque en analytics, automatización y CRM en mi rol actual.
     </p>
 
-    <h2>Traino — “Designed by gymrats, for gymrats”</h2>
+    <!-- Traino -->
+    <h2>Traino — "Designed by gymrats, for gymrats"</h2>
     <div class="card">
+      <div class="project-header">
+        <span class="status-badge status-active">En desarrollo activo</span>
+      </div>
       <p>
         Nació por una necesidad real: ninguna app existente cubría mis requerimientos de tracking en gimnasio,
         y estaba cansado del Excel. La idea fue construir un producto desde cero sin background previo en desarrollo de producto,
         apoyándome en IA para acelerar aprendizaje y código.
       </p>
-      <ul class="list">
-        <li><strong>Frontend:</strong> Streamlit (Python, multi-page)</li>
-        <li><strong>Backend/DB:</strong> Supabase (PostgreSQL + Auth + Row Level Security)</li>
-        <li><strong>Deploy:</strong> Streamlit Community Cloud</li>
-      </ul>
-      <p><strong>Próximo milestone:</strong> sumar features core y abrir pruebas con conocidos para feedback.</p>
-      <div class="badges">
+
+      <div class="card-section">
+        <p class="card-section-label">Stack</p>
+        <div class="tech-badges">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Streamlit</span>
+          <span class="tech-badge">Supabase</span>
+          <span class="tech-badge">PostgreSQL</span>
+          <span class="tech-badge">Row Level Security</span>
+        </div>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Progreso</p>
+        <ul class="progress-list">
+          <li class="done">Arquitectura multi-page definida</li>
+          <li class="done">Autenticación con Supabase Auth</li>
+          <li class="done">Registro de ejercicios y sets</li>
+          <li class="done">Historial de entrenamientos</li>
+          <li>Rutinas personalizadas y plantillas</li>
+          <li>Feedback loop con usuarios reales</li>
+          <li>Deploy público estable</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Aprendizajes clave hasta ahora</p>
+        <ul class="list">
+          <li>Auth + RLS en Supabase elimina la necesidad de lógica de permisos en el frontend — simplifica mucho la arquitectura.</li>
+          <li>Streamlit acelera el ciclo prototipo → feedback, pero tiene límites de UX que aparecen rápido cuando el producto crece.</li>
+          <li>Empezar con un usuario real (yo mismo) antes de abrir a otros es la forma más rápida de priorizar qué es indispensable.</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Próximo hito</p>
+        <p style="margin:0;">Abrir pruebas con 3–5 usuarios conocidos para validar el flujo de registro de rutina completa y recoger feedback estructurado.</p>
+      </div>
+
+      <div class="badges" style="margin-top:14px;">
         <span class="badge">Product thinking</span>
         <span class="badge">Architecture</span>
         <span class="badge">Ship & iterate</span>
       </div>
     </div>
 
-    <h2>SimplyFin — Personal finance dashboard</h2>
+    <!-- SimplyFin -->
+    <h2>SimplyFin — Personal Finance Dashboard</h2>
     <div class="card">
+      <div class="project-header">
+        <span class="status-badge status-mvp">MVP funcional</span>
+      </div>
       <p>
         Dashboard para seguimiento financiero personal: ingresos y gastos, con visualización clara y escalable.
-        Los datos se cargan en un Excel y la app los consume para construir un tablero interactivo.
+        Los datos se cargan en un Excel y la app los consume para construir un tablero interactivo con insights,
+        presupuestos y análisis por categoría.
       </p>
-      <ul class="list">
-        <li><strong>Input:</strong> Excel (registro al momento del gasto)</li>
-        <li><strong>Output:</strong> dashboard interactivo para insights, presupuestos y planificación</li>
-      </ul>
-      <p class="small">
-        Aprendizaje clave: ordenar datos primero, y recién después buscar “insights”. (Sí, el orden también es una feature.)
-      </p>
+
+      <div class="card-section">
+        <p class="card-section-label">Stack</p>
+        <div class="tech-badges">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Streamlit</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">Excel (input)</span>
+          <span class="tech-badge">Plotly</span>
+        </div>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Progreso</p>
+        <ul class="progress-list">
+          <li class="done">Ingesta desde Excel con validación de estructura</li>
+          <li class="done">Dashboard de gastos por categoría y mes</li>
+          <li class="done">Comparativa ingresos vs egresos</li>
+          <li class="done">Filtros interactivos por período y categoría</li>
+          <li>Proyecciones y presupuesto mensual</li>
+          <li>Exportar resumen en PDF</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Aprendizajes clave hasta ahora</p>
+        <ul class="list">
+          <li>El orden y consistencia de los datos de entrada importa más que cualquier visualización — "ordenar datos primero" no es un cliché, es un principio de diseño.</li>
+          <li>Excel como input hace el producto más adoptable para usuarios no técnicos que cualquier formulario web.</li>
+          <li>Los dashboards financieros personales necesitan opinionated defaults — demasiada flexibilidad paraliza al usuario.</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Próximo hito</p>
+        <p style="margin:0;">Agregar módulo de presupuesto mensual con alertas cuando el gasto supera el límite definido por categoría.</p>
+      </div>
     </div>
 
-    <h2>ML Pipeline — Spotify API</h2>
+    <!-- Machine Learning Pipeline -->
+    <h2>Spotify Growth ML — Predicción de Popularidad</h2>
     <div class="card">
+      <div class="project-header">
+        <span class="status-badge status-mvp">Modelado completo</span>
+      </div>
       <p>
-        Proyecto en progreso: pipeline de machine learning utilizando datos de canciones extraídos vía API de Spotify.
-        Enfoque end-to-end: ingesta, feature engineering, entrenamiento y evaluación.
+        Pipeline profesional de Data Science orientado a Growth Marketing: predice el nivel de popularidad de canciones
+        en Spotify a partir de metadatos y señales de contexto (playlists, artistas). Simula un caso real de negocio
+        donde la popularidad funciona como proxy de engagement, análogo a predecir el desempeño de campañas o contenidos digitales.
       </p>
-      <div class="badges">
-        <span class="badge">Data ingestion</span>
-        <span class="badge">Feature engineering</span>
-        <span class="badge">Modeling</span>
+
+      <div class="card-section">
+        <p class="card-section-label">Stack</p>
+        <div class="tech-badges">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Spotify Web API (OAuth)</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">Parquet</span>
+          <span class="tech-badge">Jupyter</span>
+        </div>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Progreso</p>
+        <ul class="progress-list">
+          <li class="done">Ingesta desde Spotify API con autenticación OAuth</li>
+          <li class="done">Dataset crudo versionado (playlists de usuario + públicas + search)</li>
+          <li class="done">EDA completo con análisis de distribución y calidad de datos</li>
+          <li class="done">Target de ML definido (clasificación: popularidad alta vs. baja)</li>
+          <li class="done">Feature engineering básico y dataset model-ready</li>
+          <li class="done">Modelado y evaluación (baseline + comparación de modelos)</li>
+          <li>Integración de señales externas (Google Trends por artista)</li>
+          <li>Validación cruzada y tuning de hiperparámetros</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Aprendizajes clave</p>
+        <ul class="list">
+          <li>Separar código ejecutable (notebooks) de documentación estática (reportes HTML versionados) hace el proyecto más mantenible y compartible con stakeholders no técnicos.</li>
+          <li>El límite de paginación de la API de Spotify (/search: 1000 resultados por query) obliga a estrategias de ingesta multi-fuente y deduplicación — una decisión de diseño que impacta directamente el volumen y diversidad del dataset.</li>
+          <li>Definir el target de ML con criterio de negocio (popularidad como proxy de engagement) antes de hacer feature engineering evita iterar sobre el dataset equivocado.</li>
+        </ul>
+      </div>
+
+      <div class="card-section">
+        <p class="card-section-label">Próximo hito</p>
+        <p style="margin:0;">Integrar señales externas (Google Trends por artista) para enriquecer el feature set y evaluar si mejora la capacidad predictiva del modelo.</p>
+      </div>
+
+      <div class="badges" style="margin-top:14px;">
+        <span class="badge">End-to-end pipeline</span>
+        <span class="badge">Growth Marketing analog</span>
+        <span class="badge">Reproducible DS</span>
       </div>
     </div>
 
